@@ -4,10 +4,10 @@ RSpec.describe "tests/index", type: :view do
   before(:each) do
     assign(:tests, [
       Test.create!(
-        :type => "Type"
+        :test_type => "Type"
       ),
       Test.create!(
-        :type => "Type"
+        :test_type => "Type"
       )
     ])
   end

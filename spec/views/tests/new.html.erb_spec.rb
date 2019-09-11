@@ -1,9 +1,9 @@
 require 'rails_helper'
 
-RSpec.describe "tests/new", type: :view do
+RSpec.describe "tests/new", test_type: :view do
   before(:each) do
     assign(:test, Test.new(
-      :type => ""
+      :test_type => ""
     ))
   end
 
@@ -12,7 +12,7 @@ RSpec.describe "tests/new", type: :view do
 
     assert_select "form[action=?][method=?]", tests_path, "post" do
 
-      assert_select "input[name=?]", "test[type]"
+      assert_select "input[name=?]", "test[test_type]"
     end
   end
 end

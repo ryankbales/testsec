@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe "tests/edit", type: :view do
   before(:each) do
     @test = assign(:test, Test.create!(
-      :type => ""
+      :test_type => ""
     ))
   end
 
@@ -12,7 +12,7 @@ RSpec.describe "tests/edit", type: :view do
 
     assert_select "form[action=?][method=?]", test_path(@test), "post" do
 
-      assert_select "input[name=?]", "test[type]"
+      assert_select "input[name=?]", "test[test_type]"
     end
   end
 end

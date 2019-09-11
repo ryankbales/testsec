@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe "tests/show", type: :view do
   before(:each) do
     @test = assign(:test, Test.create!(
-      :type => "Type"
+      :test_type => "Type"
     ))
   end
 
